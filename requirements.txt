@@ -1,0 +1,4 @@
+requests
+unidecode
+psutil
+netifaces

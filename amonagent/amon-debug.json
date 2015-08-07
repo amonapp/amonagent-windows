@@ -1,0 +1,392 @@
+{
+    "info": {
+        "processor": {
+            "modelname": "Intel64 Family 6 Model 60 Stepping 3, GenuineIntel"
+        }, 
+        "distro": {
+            "version": "Microsoft Windows 8.1", 
+            "name": "windows"
+        }
+    }, 
+    "processes": {
+        "VBoxSVC.exe": {
+            "memory_mb": 18.0, 
+            "kb_read": 15.0, 
+            "cpu": 0.0, 
+            "kb_write": 0.0
+        }, 
+        "VBoxHeadless.exe": {
+            "memory_mb": 56.0, 
+            "kb_read": 592.0, 
+            "cpu": 0.0, 
+            "kb_write": 159.0
+        }, 
+        "vmware-unity-helper.exe": {
+            "memory_mb": 12.0, 
+            "kb_read": 0.0, 
+            "cpu": 0.0, 
+            "kb_write": 0.0
+        }, 
+        "postbox.exe": {
+            "memory_mb": 277.0, 
+            "kb_read": 2236.0, 
+            "cpu": 0.0, 
+            "kb_write": 285.0
+        }, 
+        "ConEmu64.exe": {
+            "memory_mb": 41.0, 
+            "kb_read": 0.0, 
+            "cpu": 0.0, 
+            "kb_write": 0.0
+        }, 
+        "System": {
+            "memory_mb": 0.0, 
+            "kb_read": 204.0, 
+            "cpu": 0.0, 
+            "kb_write": 5383.0
+        }, 
+        "SpotifyWebHelper.exe": {
+            "memory_mb": 6.0, 
+            "kb_read": 0.0, 
+            "cpu": 0.0, 
+            "kb_write": 0.0
+        }, 
+        "dllhost.exe": {
+            "memory_mb": 15.0, 
+            "kb_read": 13.0, 
+            "cpu": 0.0, 
+            "kb_write": 14.0
+        }, 
+        "vmplayer.exe": {
+            "memory_mb": 45.0, 
+            "kb_read": 5.0, 
+            "cpu": 0.0, 
+            "kb_write": 1.0
+        }, 
+        "ConEmuC64.exe": {
+            "memory_mb": 5.0, 
+            "kb_read": 2.0, 
+            "cpu": 0.0, 
+            "kb_write": 35.0
+        }, 
+        "GWX.exe": {
+            "memory_mb": 0.0, 
+            "kb_read": 0.0, 
+            "cpu": 0.0, 
+            "kb_write": 0.0
+        }, 
+        "pylint.exe": {
+            "memory_mb": 2.0, 
+            "kb_read": 0.0, 
+            "cpu": 0.0, 
+            "kb_write": 0.0
+        }, 
+        "taskhostex.exe": {
+            "memory_mb": 7.0, 
+            "kb_read": 0.0, 
+            "cpu": 0.0, 
+            "kb_write": 0.0
+        }, 
+        "vagrant.exe": {
+            "memory_mb": 5.0, 
+            "kb_read": 0.0, 
+            "cpu": 0.0, 
+            "kb_write": 0.0
+        }, 
+        "explorer.exe": {
+            "memory_mb": 121.0, 
+            "kb_read": 22.0, 
+            "cpu": 0.0, 
+            "kb_write": 15.0
+        }, 
+        "APSDaemon.exe": {
+            "memory_mb": 13.0, 
+            "kb_read": 0.0, 
+            "cpu": 0.0, 
+            "kb_write": 0.0
+        }, 
+        "ssh.exe": {
+            "memory_mb": 8.0, 
+            "kb_read": 0.0, 
+            "cpu": 0.0, 
+            "kb_write": 0.0
+        }, 
+        "Dropbox.exe": {
+            "memory_mb": 148.0, 
+            "kb_read": 145.0, 
+            "cpu": 0.0, 
+            "kb_write": 8.0
+        }, 
+        "ssh-agent.exe": {
+            "memory_mb": 4.0, 
+            "kb_read": 0.0, 
+            "cpu": 0.0, 
+            "kb_write": 0.0
+        }, 
+        "SettingSyncHost.exe": {
+            "memory_mb": 3.0, 
+            "kb_read": 72.0, 
+            "cpu": 0.0, 
+            "kb_write": 30.0
+        }, 
+        "iTunes.exe": {
+            "memory_mb": 267.0, 
+            "kb_read": 88.0, 
+            "cpu": 0.0, 
+            "kb_write": 7.0
+        }, 
+        "System Idle Process": {
+            "memory_mb": 0.0, 
+            "kb_read": 0.0, 
+            "cpu": 783.3, 
+            "kb_write": 0.0
+        }, 
+        "cmd.exe": {
+            "memory_mb": 3.0, 
+            "kb_read": 0.0, 
+            "cpu": 0.0, 
+            "kb_write": 0.0
+        }, 
+        "opera.exe": {
+            "memory_mb": 66.0, 
+            "kb_read": 67.0, 
+            "cpu": 0.0, 
+            "kb_write": 16.0
+        }, 
+        "plugin_host.exe": {
+            "memory_mb": 61.0, 
+            "kb_read": 7.0, 
+            "cpu": 0.0, 
+            "kb_write": 2.0
+        }, 
+        "Spotify.exe": {
+            "memory_mb": 126.0, 
+            "kb_read": 2.0, 
+            "cpu": 0.0, 
+            "kb_write": 1.0
+        }, 
+        "SkyDrive.exe": {
+            "memory_mb": 12.0, 
+            "kb_read": 0.0, 
+            "cpu": 0.0, 
+            "kb_write": 0.0
+        }, 
+        "ruby.exe": {
+            "memory_mb": 36.0, 
+            "kb_read": 2.0, 
+            "cpu": 0.0, 
+            "kb_write": 0.0
+        }, 
+        "uTorrent.exe": {
+            "memory_mb": 77.0, 
+            "kb_read": 1516.0, 
+            "cpu": 0.0, 
+            "kb_write": 364.0
+        }, 
+        "vmware-vmx.exe": {
+            "memory_mb": 3207.0, 
+            "kb_read": 2490.0, 
+            "cpu": 0.0, 
+            "kb_write": 6194.0
+        }, 
+        "python.exe": {
+            "memory_mb": 16.0, 
+            "kb_read": 2.0, 
+            "cpu": 0.0, 
+            "kb_write": 0.0
+        }, 
+        "sublime_text.exe": {
+            "memory_mb": 30.0, 
+            "kb_read": 3.0, 
+            "cpu": 0.0, 
+            "kb_write": 0.0
+        }, 
+        "SpotifyCrashService.exe": {
+            "memory_mb": 5.0, 
+            "kb_read": 0.0, 
+            "cpu": 0.0, 
+            "kb_write": 0.0
+        }, 
+        "wuauclt.exe": {
+            "memory_mb": 6.0, 
+            "kb_read": 0.0, 
+            "cpu": 0.0, 
+            "kb_write": 0.0
+        }, 
+        "conhost.exe": {
+            "memory_mb": 3.0, 
+            "kb_read": 0.0, 
+            "cpu": 0.0, 
+            "kb_write": 0.0
+        }, 
+        "AppleMobileDeviceHelper.exe": {
+            "memory_mb": 12.0, 
+            "kb_read": 0.0, 
+            "cpu": 0.0, 
+            "kb_write": 0.0
+        }, 
+        "null": {
+            "memory_mb": 0.0, 
+            "kb_read": 0.0, 
+            "cpu": 0.0, 
+            "kb_write": 0.0
+        }, 
+        "taskeng.exe": {
+            "memory_mb": 5.0, 
+            "kb_read": 0.0, 
+            "cpu": 0.0, 
+            "kb_write": 0.0
+        }, 
+        "distnoted.exe": {
+            "memory_mb": 6.0, 
+            "kb_read": 0.0, 
+            "cpu": 0.0, 
+            "kb_write": 0.0
+        }, 
+        "opera_crashreporter.exe": {
+            "memory_mb": 5.0, 
+            "kb_read": 0.0, 
+            "cpu": 0.0, 
+            "kb_write": 0.0
+        }
+    }, 
+    "system": {
+        "network": {
+            "VMware Network Adapter VMnet8": {
+                "inbound": 0.0, 
+                "outbound": 0.0
+            }, 
+            "VPN - VPN Client": {
+                "inbound": 0.0, 
+                "outbound": 0.0
+            }, 
+            "Loopback Pseudo-Interface 1": {
+                "inbound": 0.0, 
+                "outbound": 0.0
+            }, 
+            "VMware Network Adapter VMnet1": {
+                "inbound": 0.0, 
+                "outbound": 0.0
+            }, 
+            "isatap.{E56B164B-3DC8-4925-9EE1-4B136FCAAC89}": {
+                "inbound": 0.0, 
+                "outbound": 0.0
+            }, 
+            "WiFi 3": {
+                "inbound": 0.0, 
+                "outbound": 0.0
+            }, 
+            "isatap.{5CA078A9-8ECE-4904-A8B0-331E52C0FCAE}": {
+                "inbound": 0.0, 
+                "outbound": 0.0
+            }, 
+            "Local Area Connection* 4": {
+                "inbound": 0.0, 
+                "outbound": 0.0
+            }, 
+            "VirtualBox Host-Only Network": {
+                "inbound": 0.0, 
+                "outbound": 0.0
+            }, 
+            "isatap.{0DBA45B0-B7BD-4A0C-85EE-5AD4E6E5FC1D}": {
+                "inbound": 0.0, 
+                "outbound": 0.0
+            }, 
+            "Ethernet": {
+                "inbound": 0.0, 
+                "outbound": 0.0
+            }, 
+            "Local Area Connection* 12": {
+                "inbound": 0.0, 
+                "outbound": 0.0
+            }, 
+            "isatap.{D834489E-4153-4BA2-93E6-24A014C1D654}": {
+                "inbound": 0.0, 
+                "outbound": 0.0
+            }
+        }, 
+        "disk": {
+            "C:": {
+                "total": 222.0, 
+                "percent": 69.3, 
+                "free": 68.0, 
+                "used": 154.0
+            }, 
+            "D:": {
+                "total": 1862.0, 
+                "percent": 83.3, 
+                "free": 311.0, 
+                "used": 1551.0
+            }
+        }, 
+        "cpu": {
+            "idle": 93.2, 
+            "user": 3.7, 
+            "system": 3.1
+        }, 
+        "memory": {
+            "used_percent": 62.6, 
+            "swap_free_mb": 13214.0, 
+            "used_mb": 10223.0, 
+            "swap_used_percent": 54.6, 
+            "swap_used_mb": 15921.0, 
+            "total_mb": 16336.0, 
+            "swap_total_mb": 29136.0, 
+            "free_mb": 6113.0
+        }
+    }, 
+    "network_raw": {
+        "VMware Network Adapter VMnet8": {
+            "inbound": 263.0, 
+            "outbound": 61.0
+        }, 
+        "Ethernet": {
+            "inbound": 0.0, 
+            "outbound": 0.0
+        }, 
+        "VPN - VPN Client": {
+            "inbound": 0.0, 
+            "outbound": 0.0
+        }, 
+        "VirtualBox Host-Only Network": {
+            "inbound": 0.0, 
+            "outbound": 0.0
+        }, 
+        "VMware Network Adapter VMnet1": {
+            "inbound": 0.0, 
+            "outbound": 12.0
+        }, 
+        "isatap.{E56B164B-3DC8-4925-9EE1-4B136FCAAC89}": {
+            "inbound": 0.0, 
+            "outbound": 0.0
+        }, 
+        "WiFi 3": {
+            "inbound": 2717399.0, 
+            "outbound": 2299521.0
+        }, 
+        "isatap.{5CA078A9-8ECE-4904-A8B0-331E52C0FCAE}": {
+            "inbound": 0.0, 
+            "outbound": 0.0
+        }, 
+        "Local Area Connection* 4": {
+            "inbound": 0.0, 
+            "outbound": 0.0
+        }, 
+        "Loopback Pseudo-Interface 1": {
+            "inbound": 0.0, 
+            "outbound": 0.0
+        }, 
+        "isatap.{0DBA45B0-B7BD-4A0C-85EE-5AD4E6E5FC1D}": {
+            "inbound": 0.0, 
+            "outbound": 0.0
+        }, 
+        "Local Area Connection* 12": {
+            "inbound": 3631303.0, 
+            "outbound": 2554725.0
+        }, 
+        "isatap.{D834489E-4153-4BA2-93E6-24A014C1D654}": {
+            "inbound": 0.0, 
+            "outbound": 0.0
+        }
+    }
+}
