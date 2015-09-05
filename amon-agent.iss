@@ -12,7 +12,7 @@
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
 AppId={{33541FBB-1B7C-4C64-8902-420ACE513DF9}
 AppName=amon-agent
-AppVersion=1.1
+AppVersion=1.2
 ;AppVerName=amon-agent 1.0
 AppPublisher=Simplistic LLC
 AppPublisherURL=https://amon.cx
@@ -20,7 +20,7 @@ AppSupportURL=https://amon.cx
 AppUpdatesURL=https://amon.cx
 DefaultDirName={pf}\AmonAgent
 DefaultGroupName=amon-agent
-OutputBaseFilename=amon-agent-1.1
+OutputBaseFilename=amon-agent-1.2
 Compression=lzma
 SolidCompression=yes
 WizardImageFile=welcome.bmp
