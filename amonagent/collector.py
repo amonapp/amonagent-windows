@@ -16,7 +16,11 @@ size_list = [
 	(1024 ** 0, ('byte', 'bytes')),
 ]
 
+def normalize_device_name(device_name):
+	return device_name.strip().lower().replace(' ', '_')
+
 def convert_bytes_to(value, to='MB'):
+	value = float(value)
 	for factor, suffix in size_list:
 		if suffix == to:
 			break
@@ -73,12 +77,21 @@ def get_disk_check():
 
 def get_network_traffic():
 	data = {}
-	result = psutil.net_io_counters(pernic=True)
-	for interface, value in result.items():
-		data[interface] = {
-			"inbound": convert_bytes_to(value.bytes_recv, to='KB'),
-			"outbound": convert_bytes_to(value.bytes_sent, to='KB')
-		}
+	try:
+		net = c.Win32_PerfFormattedData_Tcpip_NetworkInterface()
+	except AttributeError:
+		log.info('Missing Win32_PerfFormattedData_Tcpip_NetworkInterface WMI class.'
+					 ' No network metrics will be returned')
+
+
+	for iface in net:
+		name = normalize_device_name(iface.name)
+		data[name] = {}
+
+		if iface.BytesReceivedPerSec is not None:
+			data[name]['inbound'] = convert_bytes_to(iface.BytesReceivedPerSec, to='KB')
+		if iface.BytesSentPerSec is not None:
+			data[name]['outbound'] = convert_bytes_to(iface.BytesSentPerSec, to='KB')
 
 	return data
 
@@ -126,104 +139,6 @@ def get_process_list():
 	return process_data
 
 
-class NetIOCounters(object):
-	def __init__(self, pernic=True):
-		self.last_req = None
-		self.last_req_time = None
-		self.pernic = pernic
-
-	def _get_net_io_counters(self):
-		"""
-		Fetch io counters from psutil and transform it to
-		dicts with the additional attributes defaulted
-		"""
-		counters = psutil.net_io_counters(pernic=self.pernic)
-
-		res = {}
-		for name, io in counters.iteritems():
-			res[name] = io._asdict()
-			res[name].update({'tx_per_sec': 0, 'rx_per_sec': 0})
-		return res
-
-	def _set_last_request(self, counters):
-		self.last_req = counters
-		self.last_req_time = time.time()
-
-	def get(self):
-		return self.last_req
-
-	def update(self):
-		counters = self._get_net_io_counters()
-
-		if not self.last_req:
-			self._set_last_request(counters)
-			return counters
-
-		time_delta = time.time() - self.last_req_time
-
-		if not time_delta:
-			return counters
-
-		for name, io in counters.iteritems():
-			last_io = self.last_req.get(name)
-			if not last_io:
-				continue
-
-			counters[name].update({
-				'inbound': (io['bytes_recv'] - last_io['bytes_recv']) / time_delta,
-				'outbound': (io['bytes_sent'] - last_io['bytes_sent']) / time_delta
-			})
-
-
-		self._set_last_request(counters)
-
-		return counters
-
-	def result(self):
-		data = {}
-		self.update()
-		result = self.update()
-		for iface, values in result.items():
-			inbound = values.get('inbound', 0)
-			outbound = values.get("outbound", 0)
-			data[iface] = {
-				'inbound': convert_bytes_to(inbound, to='KB'),
-				'outbound': convert_bytes_to(outbound, to='KB')
-			}
-			
-		return data
-
-
-def get_interface_addresses():
-	"""
-	Get addresses of available network interfaces.
-	See netifaces on pypi for details.
-	Returns a list of dicts
-	"""
-
-	addresses = []
-	ifaces = netifaces.interfaces()
-	for iface in ifaces:
-		addrs = netifaces.ifaddresses(iface)
-		families = addrs.keys()
-
-		# put IPv4 to the end so it lists as the main iface address
-		if netifaces.AF_INET in families:
-			families.remove(netifaces.AF_INET)
-			families.append(netifaces.AF_INET)
-
-		for family in families:
-			for addr in addrs[family]:
-				address = {
-					'name': iface,
-					'family': family,
-					'ip': addr['addr'],
-				}
-				addresses.append(address)
-
-	return addresses
-
-
 # net = NetIOCounters()
 # print net.result()
 system_data_dict = {
@@ -233,5 +148,4 @@ system_data_dict = {
 	# 'network': get_network_traffic(),
 	# 'processes': get_process_list()
 }
-
 # print system_data_dict
