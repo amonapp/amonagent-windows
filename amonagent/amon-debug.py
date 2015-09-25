@@ -26,6 +26,5 @@ if __name__ == "__main__":
 		'network_raw': get_network_traffic()
 	}
 
-	print stats
 	with open('amon-debug.json', "w+") as file:
 		json.dump(stats, file, indent=4)

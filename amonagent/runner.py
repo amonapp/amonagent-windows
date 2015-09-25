@@ -6,7 +6,6 @@ from amonagent.collector import (
 	get_network_traffic,
 )
 from amonagent.distro import windows_platform_data
-from amonagent.collector import NetIOCounters
 
 class Runner(object):
 
@@ -14,13 +13,12 @@ class Runner(object):
 		return windows_platform_data()
 
 	def system(self):
-		net = NetIOCounters()
 		
 		system_data_dict = {
 			'memory': get_memory_info(),
 			'cpu': get_cpu_utilization(),
 			'disk': get_disk_check(),
-			'network': net.result(),
+			'network': get_network_traffic(),
 		}
 		return system_data_dict
 
